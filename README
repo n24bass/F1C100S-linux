@@ -1,0 +1,12 @@
+git clone https://github.com/Mr-Bossman/F1C100S-linux.git
+
+git submodule update --init
+
+cd buildroot
+
+make BR2_EXTERNAL=$PWD/../ F1C100S_defconfig
+
+make
+
+sudo dd if=output/images/sdcard.img of=/dev/sdX
+
