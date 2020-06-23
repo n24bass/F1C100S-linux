@@ -1,3 +1,6 @@
+[submodule "package/8080"]
+	path = package/8080
+	url = https://github.com/Mr-Bossman/8080.git
 [submodule "buildroot"]
 	path = buildroot
 	url = https://github.com/buildroot/buildroot.git
