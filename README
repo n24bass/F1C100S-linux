@@ -1,5 +1,7 @@
 git clone https://github.com/Mr-Bossman/F1C100S-linux.git
 
+cd F1C100S-linux
+
 git submodule update --init
 
 cd buildroot
