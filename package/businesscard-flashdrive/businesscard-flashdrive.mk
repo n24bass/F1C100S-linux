@@ -27,7 +27,7 @@ endef
 
 define BUSINESSCARD_FLASHDRIVE_INSTALL_TARGET_CMDS
 	mkdir -p $(BINARIES_DIR)
-	cp $(@D)/flashdrive.img $(BINARIES_DIR)/flashdrive.img
+	cp $(@D)/flashdrive.vfat $(BINARIES_DIR)/flashdrive.vfat
 endef
 
 $(eval $(generic-package))
