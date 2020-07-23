@@ -1,5 +1,5 @@
-get George Hilliard thirtythreeforty's usb flash drive working
-get usb serial working
-get audio working 
+get g_multi working so far g_serial g_ether and g_mass_storage work sepreatly 
+get audio working only thing left is to get pulse audio working 
 reduce changes to uboot
+
 
