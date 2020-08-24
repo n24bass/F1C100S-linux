@@ -12,3 +12,28 @@ make
 
 sudo dd if=output/images/sdcard.img of=/dev/sdX
 
+
+
+so i have been looking around and learning and aparently u can run buster on this chip its realy jenk but its works
+
+so copy the sdcard.img to random directory and enter a termial there
+
+sudo losetup -o 22020096 /dev/loop1 sdcard.img
+
+sudo mount /dev/loop1 /mnt
+
+sudo rm -rf /mnt/*
+
+sudo debootstrap --foreign --arch armel buster /mnt http://deb.debian.org/debian/
+
+sudo umount /mnt
+
+sudo losetup -d /dev/loop1
+
+sudo dd if=sdcard.img of=/dev/sdX
+
+at this point if nothing changes in buster it should boot u will have very litle to work with but u can set it up better at this point its just a proof of consept
+this was built on aug 24 2020 using debian buster idk to many version numbers to figure out 
+
+
+notes this chip uses the armv5te micro architechure and most likely wont be suported in bullseye seeing that stretch doesnt is the last to suport armv4t u can make it output vga using a lot of resistors and either an opamp or some cmos or ttl buffers 
