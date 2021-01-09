@@ -1,3 +1,5 @@
+# as of recently i cant compile using debian sid i tested on buster and it still works gcc10 is having issues 
+
 git clone https://github.com/Mr-Bossman/F1C100S-linux.git
 
 cd F1C100S-linux
