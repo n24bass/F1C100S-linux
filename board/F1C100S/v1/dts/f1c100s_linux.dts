@@ -20,7 +20,8 @@
 	};
 
 	panel: panel {
-		compatible = "Lg,lb070wv8", "simple-panel";
+		compatible = "qiaodian,qd43003c0-40", "simple-panel";
+		/* compatible = "Lg,lb070wv8", "simple-panel"; */
 		#address-cells = <1>;
 		#size-cells = <0>;
 		enable-gpios = <&pio 4 6 GPIO_ACTIVE_HIGH>;
