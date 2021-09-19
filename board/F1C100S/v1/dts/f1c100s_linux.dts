@@ -47,11 +47,32 @@
 	};
 };
 
+&uart0 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&uart0_pe_pins>;
+	status = "okay";
+};
+
+&codec {
+	allwinner,audio-routing =
+		"Headphone", "HP",
+		"Headphone", "HPCOM",
+		"MIC", "Mic";
+	status = "okay";
+};
+
 &be0 {
 	status = "okay";
 };
 
 &de {
+	status = "okay";
+};
+
+&mmc0 {
+	vmmc-supply = <&reg_vcc3v3>;
+	bus-width = <4>;
+	broken-cd;
 	status = "okay";
 };
 
@@ -68,25 +89,12 @@
 	};
 };
 
-&mmc0 {
-	vmmc-supply = <&reg_vcc3v3>;
-	bus-width = <4>;
-	broken-cd;
-	status = "okay";
-};
-
-&uart0 {
-	pinctrl-names = "default";
-	pinctrl-0 = <&uart0_pe_pins>;
-	status = "okay";
-};
-
 &otg_sram {
 	status = "okay";
 };
 
 &usb_otg {
-	dr_mode = "otg";
+	dr_mode = "host";
 	status = "okay";
 };
 
@@ -94,13 +102,4 @@
 	usb0_id_det-gpio = <&pio 4 2 GPIO_ACTIVE_HIGH>; /* PE2 */
 	status = "okay";
 };
-&codec {
-	allwinner,audio-routing =
-		"Headphone", "HP",
-		"Headphone", "HPCOM",
-		"MIC", "Mic";
-	status = "okay";
-};
-
-
 
